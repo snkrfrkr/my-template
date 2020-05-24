@@ -1,0 +1,44 @@
+{% extends "pre_login_base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Login{% endblock %}</title>
+</head>
+{% block content %}
+
+<body>
+  <div class="row">
+    <form method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="email" type="email" name="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6">
+          <button id="btn" type="submit" class="waves-effect waves-light btn">Einloggen</button>
+        </div>
+      </div>
+  </div>
+  </form>
+  </div>
+  {% block script %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  {% endblock %}
+</body>
+{% endblock %}
+
+</html>
